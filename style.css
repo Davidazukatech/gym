@@ -43,6 +43,52 @@ nav a:hover {
   color: white;
   text-decoration: none;
 }
+/* ================= RESPONSIVE NAVBAR ================= */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  header {
+    padding: 15px 20px;
+    width: 100%;
+  }
+
+  nav {
+    position: absolute;
+    top: 65px;
+    left: 0;
+    background: #111;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav a {
+    padding: 15px 0;
+    border-top: 1px solid #222;
+    font-size: 18px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav.active {
+    display: flex;
+  }
+}
+
+/* Prevent content from hiding behind fixed header */
+body {
+  padding-top: 80px;
+}
+
 
 /* ================= SLIDER ================= */
 .slider {
@@ -398,3 +444,4 @@ footer {
     font-size: 32px;
   }
 }
+
