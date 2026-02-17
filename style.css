@@ -22,7 +22,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 40px;
+  padding: 15px 20px;
   background: #111;
   position: fixed;
   width: 100%;
@@ -64,9 +64,10 @@ nav a:hover {
 /* Hamburger Menu */
 .menu-toggle {
   display: none;
-  font-size: 28px;
+  font-size: 30px;
   color: white;
   cursor: pointer;
+   margin-left:auto;
 }
 
 /* =================================================
@@ -95,7 +96,7 @@ nav a:hover {
 
   nav a {
     width: 100%;
-    padding: 15px 0;
+    padding: 15px ;
     border-top: 1px solid #222;
     font-size: 18px;
   }
@@ -315,3 +316,4 @@ footer {
   background: #111;
   margin-top: 50px;
 }
+
