@@ -20,5 +20,8 @@ function closePopup() {
 }
 
 function toggleMenu() {
-  document.getElementById("navMenu").classList.toggle("active");
+  const nav = document.querySelector('nav'); // select your nav
+  nav.classList.toggle('active'); // toggle "active" class
 }
+
+
