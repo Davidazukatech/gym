@@ -1,6 +1,62 @@
-  
+body {
+        font-family: "poppins", sans-serif;
+        background: black;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-position-x: fixed;
+        justify-content: center;
+        align-items: center;
+        height: 40vh;
+        font-size: 120%;
+        margin: 0;
+        padding: 0;
+      }
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 50px;
+        background: #111;
+        position: fixed;
+        width: 95%;
+        top: 0;
+        z-index: 1000;
+      }
 
+      .logo {
+        font-size: 24px;
+        font-weight: bold;
+        color: red;
+      }
 
+      nav a {
+        color: white;
+        margin: 0 10px;
+        text-decoration: none;
+        font-size: 16px;
+      }
+
+      nav a:hover {
+        color: red;
+      }
+
+      .btn {
+        background: red;
+        padding: 8px 15px;
+        border-radius: 5px;
+        color: white;
+        text-decoration: none;
+      }  
+
+/* Hamburger Menu */
+.menu-toggle {
+display: none;
+font-size: 30px;
+color: white;
+cursor: pointer;
+margin-left:auto;
+}
 
 /* =================================================
    HERO SECTION
@@ -214,6 +270,7 @@ footer {
   background: #111;
   margin-top: 50px;
 }
+
 
 
 
