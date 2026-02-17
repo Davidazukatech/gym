@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Lil Dolph iFitness </title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        font-family: "poppins", sans-serif;
+        background: black;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-position-x: fixed;
+        justify-content: center;
+        align-items: center;
+        height: 40vh;
+        font-size: 120%;
+        margin: 0;
+        padding: 0;
+      }
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 50px;
+        background: #111;
+        position: fixed;
+        width: 95%;
+        top: 0;
+        z-index: 1000;
+      }
+
+      .logo {
+        font-size: 24px;
+        font-weight: bold;
+        color: red;
+      }
+
+      nav a {
+        color: white;
+        margin: 0 10px;
+        text-decoration: none;
+        font-size: 16px;
+      }
+
+      nav a:hover {
+        color: red;
+      }
+
+      .btn {
+        background: red;
+        padding: 8px 15px;
+        border-radius: 5px;
+        color: white;
+        text-decoration: none;
+      }
+
+      .Login {
+        background: white;
+        padding: 20px;
+        border-radius: 20px;
+        width: 25%;
+        box-shadow:
+          0px,
+          0px,
+          40px black;
+        margin-left: 35%;
+        margin-top: 10%;
+      }
+
+      input {
+        width: 86%;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+      }
+
+      h1 {
+        text-align: center;
+        font-size: 30px;
+      }
+      button {
+        width: 40%;
+        border-radius: 10px;
+        background-color: white;
+        padding: 20px;
+        margin-left: 30%;
+      }
+      .btn:hover {
+        color: red;
+      }
+      /* CSS */
+      .input-wrapper {
+        display: flex;
+        align-items: center;
+        border: 1px solid #000; /* same as input border */
+        border-radius: 10px;
+        overflow: hidden; /* keeps the select inside */
+        width: 250px; /* adjust as needed */
+      }
+
+      .input-wrapper select,
+      .input-wrapper input {
+        border: none; /* remove default borders */
+        outline: none;
+        padding: 10px;
+        font-size: 14px;
+      }
+
+      .input-wrapper select {
+        background-color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">Lil Dolph iFitness</div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="classes.html">Classes</a>
+        <a href="trainers.html">Trainers</a>
+        <a href="contact.html">Contact</a>
+        <a href="login.html">Login</a>
+        <a href="signup.html" class="btn">Join Now</a>
+      </nav>
+    </header>
+
+    <div class="Login">
+      <h1>Lil Dolph iFitness</h1>
+      <div>
+        <form id="signupForm" autocomplete="off">
+        <label>email address</label>
+        <input type="text" placeholder="@gmail.com" required />
+      </div>
+    
+      <div>
+        <label>Password</label>
+        <input type="text" placeholder="15 characters" required />
+      </div>
+
+      <button type="submit" class="agree-btn"onclick="gohome()" >Login</button>
+    </form>
+      <p>
+        Dont have an account?|<a
+          href="signup.html"
+          >Signup</a
+        >
+      </p>
+    </div>
+    <script>
+      function gohome(){
+        window.location.href="index.html";
+      }
+    </script>
+  </body>
+</html>
