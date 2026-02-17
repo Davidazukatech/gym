@@ -1,20 +1,31 @@
-/* ================= GENERAL ================= */
-body {
+Copy code
+/* =================================================
+   GLOBAL RESET
+================================================= */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   font-family: Arial, sans-serif;
   background: #000;
   color: white;
+  padding-top: 80px; /* prevents fixed header overlap */
 }
 
-/* ================= HEADER & NAV ================= */
+/* =================================================
+   NAVBAR / HEADER
+================================================= */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 50px;
+  padding: 15px 40px;
   background: #111;
   position: fixed;
-  width: 95%;
+  width: 100%;
   top: 0;
   z-index: 1000;
 }
@@ -25,11 +36,18 @@ header {
   color: red;
 }
 
+/* Desktop Nav */
+nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
 nav a {
   color: white;
-  margin: 0 10px;
   text-decoration: none;
   font-size: 16px;
+  transition: 0.3s;
 }
 
 nav a:hover {
@@ -41,35 +59,42 @@ nav a:hover {
   padding: 8px 15px;
   border-radius: 5px;
   color: white;
-  text-decoration: none;
 }
-/* ================= RESPONSIVE NAVBAR ================= */
+
+/* Hamburger Menu */
 .menu-toggle {
   display: none;
   font-size: 28px;
-  cursor: pointer;
   color: white;
+  cursor: pointer;
 }
 
-/* Mobile styles */
+/* =================================================
+   MOBILE NAVBAR
+================================================= */
 @media (max-width: 768px) {
+
   header {
     padding: 15px 20px;
-    width: 100%;
   }
 
   nav {
     position: absolute;
-    top: 65px;
+    top: 70px;
     left: 0;
-    background: #111;
     width: 100%;
-    display: none;
+    background: #111;
     flex-direction: column;
-    text-align: center;
+    align-items: center;
+    display: none;
+  }
+
+  nav.active {
+    display: flex;
   }
 
   nav a {
+    width: 100%;
     padding: 15px 0;
     border-top: 1px solid #222;
     font-size: 18px;
@@ -78,19 +103,33 @@ nav a:hover {
   .menu-toggle {
     display: block;
   }
+}
 
-  nav.active {
-    display: flex;
+/* =================================================
+   HERO SECTION
+================================================= */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  font-size: 48px;
+}
+
+.hero p {
+  font-size: 20px;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 32px;
   }
 }
 
-/* Prevent content from hiding behind fixed header */
-body {
-  padding-top: 80px;
-}
-
-
-/* ================= SLIDER ================= */
+/* =================================================
+   SLIDER
+================================================= */
 .slider {
   margin-top: 70px;
   height: 400px;
@@ -111,128 +150,65 @@ body {
   opacity: 1;
 }
 
-/* ================= HERO SECTION ================= */
-.hero {
-  text-align: center;
-  padding: 100px 20px;
-}
-
-.hero h1 {
-  font-size: 48px;
-}
-
-.hero p {
-  font-size: 20px;
-}
-/* CONTENT SECTION */
+/* =================================================
+   CONTENT SECTION
+================================================= */
 .content {
   max-width: 900px;
   margin: 80px auto;
   padding: 40px;
   background: linear-gradient(145deg, #111, #0b0b0b);
   border-radius: 14px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
   color: #eaeaea;
 }
 
-/* HEADINGS */
 .content h2 {
   font-size: 36px;
   color: #ff4d00;
   margin-bottom: 20px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
 }
 
 .content h3 {
   font-size: 22px;
   color: #00c6ff;
   margin-top: 35px;
-  margin-bottom: 12px;
 }
 
-/* PARAGRAPHS */
 .content p {
   font-size: 16px;
   line-height: 1.8;
   color: #cfcfcf;
 }
 
-/* OPENING HOURS STYLE */
-.content p br {
-  line-height: 2.2;
-}
-
-/* HOURS TEXT */
-.content p {
-  font-weight: 500;
-}
-
-/* LOCATION BOX */
-.content h3 + p {
-  background: rgba(255, 255, 255, 0.03);
-  padding: 16px 20px;
-  border-left: 4px solid #ff4d00;
-  border-radius: 6px;
-}
-
-/* RESPONSIVE */
 @media (max-width: 768px) {
   .content {
     margin: 40px 15px;
     padding: 25px;
   }
-
-  .content h2 {
-    font-size: 28px;
-  }
 }
 
-/* ================= FEATURES ================= */
+/* =================================================
+   FEATURES
+================================================= */
 .why-fitness {
   padding: 50px 15px;
   text-align: center;
 }
 
-.why-fitness h4 {
-  font-size: 0.75rem;
-  letter-spacing: 2px;
-  color: #777;
-}
-
-.why-fitness h2 {
-  font-size: 1.6rem;
-}
-
 .why-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
   gap: 30px;
 }
 
-.why-box span {
-  font-size: 40px;
-}
 .why-box {
   padding: 20px;
 }
-.why-box p {
-  font-size: 0.9rem;
-}
-.why-fitness h3 {
-  font-size: 1rem;
-}
 
-/* ================= PAGE HEADER ================= */
-.page-header {
-  margin-top: 80px;
-  text-align: center;
-  padding: 60px;
-  background: #111;
-  font-size: 28px;
-}
-
-/* ================= ABOUT PAGE ================= */
+/* =================================================
+   ABOUT PAGE
+================================================= */
 .about-section {
   display: flex;
   padding: 50px;
@@ -241,8 +217,6 @@ body {
 
 .about-text {
   flex: 1;
-  font-size: 18px;
-  line-height: 1.6;
 }
 
 .about-image img {
@@ -250,10 +224,18 @@ body {
   border-radius: 10px;
 }
 
-/* ================= CLASSES PAGE ================= */
+@media (max-width: 768px) {
+  .about-section {
+    flex-direction: column;
+  }
+}
+
+/* =================================================
+   CLASSES PAGE
+================================================= */
 .class-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3,1fr);
   gap: 20px;
   padding: 50px;
 }
@@ -270,89 +252,41 @@ body {
   border-radius: 10px;
 }
 
-.class-card h3 {
-  margin-top: 10px;
+@media (max-width: 768px) {
+  .class-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
-/* POPUP BOX */
-.popup-box {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 2000;
-  display: none;
-}
-
-.popup-content {
-  background: #111;
-  padding: 30px;
-  border-radius: 10px;
-  text-align: center;
-  width: 300px;
-  box-shadow: 0 0 10px red;
-}
-
-.popup-content h2 {
-  color: red;
-}
-
-.popup-content button {
-  padding: 10px 20px;
-  background: red;
-  border: none;
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.close-btn {
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  font-size: 22px;
-  cursor: pointer;
-  color: white;
-}
-
-/* ================= TRAINERS PAGE ================= */
-
-/* Trainer Grid Layout */
+/* =================================================
+   TRAINERS PAGE
+================================================= */
 .trainer-grid {
   display: flex;
   justify-content: center;
   gap: 30px;
-  flex-wrap: wrap; /* allows wrap on smaller screens */
+  flex-wrap: wrap;
   padding: 40px;
 }
 
-/* Trainer Card */
 .trainer-card {
   width: 250px;
   text-align: center;
 }
 
-/* Make images same size and shape */
 .trainer-card img {
   width: 100%;
   height: 260px;
-  object-fit: cover; /* keeps image nicely cropped */
-  border-radius: 12px; /* same shape (rounded corners) */
-  display: block;
-}
-.trainer-card h3 {
-  margin: 10px 0 5px;
+  object-fit: cover;
+  border-radius: 12px;
 }
 
-/* ================= CONTACT PAGE ================= */
+/* =================================================
+   CONTACT PAGE
+================================================= */
 .social-contact {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(160px,1fr));
   gap: 20px;
   padding: 50px;
   max-width: 900px;
@@ -361,106 +295,23 @@ body {
 
 .social-box {
   background: #111;
-  color: white;
   text-align: center;
   padding: 30px 20px;
   border-radius: 10px;
   text-decoration: none;
-  transition:
-    transform 0.3s,
-    background 0.3s;
-}
-
-.social-box i {
-  font-size: 35px;
-  margin-bottom: 10px;
-}
-
-.social-box span {
-  display: block;
-  font-size: 16px;
-  font-weight: bold;
+  transition: 0.3s;
 }
 
 .social-box:hover {
   transform: translateY(-8px);
 }
 
-/* Platform colors */
-.whatsapp {
-  background: #25d366;
-}
-.instagram {
-  background: #e1306c;
-}
-.facebook {
-  background: #1877f2;
-}
-.twitter {
-  background: #000;
-}
-.telegram {
-  background: rgb(121, 121, 204);
-}
-
-/* ================= FOOTER ================= */
+/* =================================================
+   FOOTER
+================================================= */
 footer {
   text-align: center;
   padding: 20px;
   background: #111;
   margin-top: 50px;
-} /* =========================
-
-/* ================= AUTH PAGES (LOGIN & REGISTER) ================= */
-
-/* ================= RESPONSIVE DESIGN ================= */
-@media (max-width: 768px) {
-  header {
-    padding: 10px 20px;
-  }
-
-  .features {
-    flex-direction: column;
-  }
-
-  .about-section {
-    flex-direction: column;
-  }
-
-  .class-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .trainer-grid {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .contact-form {
-    width: 100%;
-  }
-
-  .hero h1 {
-    font-size: 32px;
-  }
-}
-@media (max-width: 768px) {
-  nav {
-    position: absolute;
-    top: 65px;
-    left: 0;
-    background: #111;
-    width: 100%;
-    display: none;
-    flex-direction: column;
-    text-align: center;
-  }
-
-  nav.active {
-    display: flex;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
 }
