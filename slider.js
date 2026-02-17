@@ -18,3 +18,7 @@ window.onload = function () {
 function closePopup() {
   document.getElementById("servicePopup").style.display = "none";
 }
+
+function toggleMenu() {
+  document.getElementById("navMenu").classList.toggle("active");
+}
