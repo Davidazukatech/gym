@@ -419,10 +419,6 @@ footer {
     padding: 10px 20px;
   }
 
-  nav {
-    display: none; /* Later I can make mobile menu */
-  }
-
   .features {
     flex-direction: column;
   }
@@ -431,9 +427,13 @@ footer {
     flex-direction: column;
   }
 
-  .class-grid,
-  .trainer-grid {
+  .class-grid {
     grid-template-columns: 1fr;
+  }
+
+  .trainer-grid {
+    flex-direction: column;
+    align-items: center;
   }
 
   .contact-form {
@@ -444,4 +444,23 @@ footer {
     font-size: 32px;
   }
 }
+@media (max-width: 768px) {
+  nav {
+    position: absolute;
+    top: 65px;
+    left: 0;
+    background: #111;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    text-align: center;
+  }
 
+  nav.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
