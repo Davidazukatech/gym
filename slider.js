@@ -26,21 +26,3 @@ function toggleMenu() {
 
 
 
-const menuToggle = document.querySelector('.menu-toggle');
-const nav = document.querySelector('nav');
-
-if (menuToggle && nav) {
-  menuToggle.addEventListener('click', () => {
-    nav.classList.toggle('active');
-  });
-
-  // Optional: close menu when a link is clicked (mobile)
-  document.querySelectorAll('nav a').forEach(link => {
-    link.addEventListener('click', () => {
-      nav.classList.remove('active');
-    });
-  });
-}
-
-
-
