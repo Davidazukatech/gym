@@ -1,63 +1,121 @@
+
+
+
+/* =================================================
+   GLOBAL RESET
+================================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-        font-family: "poppins", sans-serif;
-        background: black;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        background-position-x: fixed;
-        justify-content: center;
-        align-items: center;
-        height: 40vh;
-        font-size: 120%;
-        margin: 0;
-        padding: 0;
-      }
-      header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 15px 50px;
-        background: #111;
-        position: fixed;
-        width: 95%;
-        top: 0;
-        z-index: 1000;
-      }
+  font-family: 'Poppins', sans-serif;
+  background: #111;
+  color: #fff;
+  padding-top: 80px; /* prevent header overlap */
+}
 
-      .logo {
-        font-size: 24px;
-        font-weight: bold;
-        color: red;
-      }
+/* =================================================
+   HEADER / NAVBAR
+================================================= */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 10%;
+  background: linear-gradient(90deg, #ff416c, #ff4b2b);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
 
-      nav a {
-        color: white;
-        margin: 0 10px;
-        text-decoration: none;
-        font-size: 16px;
-      }
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+  color: #fff;
+}
 
-      nav a:hover {
-        color: red;
-      }
+/* Nav Links */
+nav {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
 
-      .btn {
-        background: red;
-        padding: 8px 15px;
-        border-radius: 5px;
-        color: white;
-        text-decoration: none;
-      }  
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+nav a.btn {
+  background: #fff;
+  color: #ff416c;
+  font-weight: 700;
+}
+
+nav a.btn:hover {
+  background: #ff416c;
+  color: #fff;
+}
 
 /* Hamburger Menu */
 .menu-toggle {
-display: none;
-font-size: 30px;
-color: white;
-cursor: pointer;
-margin-left:auto;
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
 }
 
+/* =================================================
+   
+
+
+/* =================================================
+   RESPONSIVE NAVBAR
+================================================= */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    position: fixed;
+    top: 70px;
+    left: -100%;
+    width: 60%;
+    height: 100vh;
+    background: linear-gradient(180deg, #ff416c, #ff4b2b);
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding-top: 50px;
+    transition: left 0.3s ease;
+  }
+
+  nav.active {
+    left: 0;
+  }
+
+  nav a {
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 18px;
+  }
+}
 /* =================================================
    HERO SECTION
 ================================================= */
@@ -270,6 +328,7 @@ footer {
   background: #111;
   margin-top: 50px;
 }
+
 
 
 
