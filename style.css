@@ -27,7 +27,7 @@ header {
 .logo {
   font-size: 22px;
   font-weight: bold;
-  color: red;
+  color: white;
 }
 
 /* NAV */
@@ -346,3 +346,4 @@ footer {
   }
 
 }
+
