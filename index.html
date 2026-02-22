@@ -1,122 +1,129 @@
 <!doctype html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-    <title>Lil Dolph iFitness</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="slider.js" defer></script>
-  </head>
-  <body>
-    <header>
-      <div class="logo">Lil Dolph iFitness</div>
-      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-      
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lil Dolph iFitness</title>
 
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="classes.html">Classes</a>
-        <a href="trainers.html">Trainers</a>
-        <a href="contact.html">Contact</a>
-        <a href="login.html">Login</a>
-        <a href="signup.html" class="btn">Join Now</a>
-      </nav>
-    </header>
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-    <!-- SLIDER -->
-    <section class="slider">
-      <img src="images/88.jpg" class="slide" />
-      <img src="images/89.jpg" class="slide" />
-      <img src="images/55.jpg" class="slide" />
-    </section>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">Lil Dolph iFitness</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="classes.html">Classes</a></li>
+        <li class="nav-item"><a class="nav-link" href="trainers.html">Trainers</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+        <li class="nav-item"><a class="btn btn-primary ms-2" href="signup.html">Join Now</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
-    <section class="hero">
-      <h1>Build Your Body With Lil Dolph iFitness</h1>
-      <p>
-        Join our fitness community and discover a stronger ,leaner you.Our
-        expert trainers will guide you every step of the way.Your fitness
-        journey starts here
-      </p>
-      <a href="signup.html" class="btn">Start Today</a>
-    </section>
-
-    <section class="why-fitness">
-      <h4>WHY Dave's i-FITNESS</h4>
-      <h2>Unique Experiences<br />Tailored To Your Lifestyle</h2>
-
-      <div class="why-grid">
-        <div class="why-box">
-          <span>🏋️</span>
-          <h3>Wide Range of Fitness Programs</h3>
-          <p>
-            Our timetable offers a wide range of low- to high-intensity fitness
-            programmes designed to suit every fitness lifestyle. There’s truly
-            something for everyone.
-          </p>
-        </div>
-
-        <div class="why-box">
-          <span>👥</span>
-          <h3>Supportive Community</h3>
-          <p>
-            Enjoy a strong sense of belonging in a community that supports your
-            fitness goals and reminds you that you are never alone.
-          </p>
-        </div>
-
-        <div class="why-box">
-          <span>🏢</span>
-          <h3>Ultra-Modern Facilities</h3>
-          <p>
-            With over 200 professionally certified trainers and ultra-modern gym
-            facilities across our locations, we deliver world-class fitness
-            experiences.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="content">
-      <h2>Welcome to Lil Dolph iFitness</h2>
-      <p>
-        Lil Dolph iFitness is a professional fitness center designed to help
-        individuals of all levels achieve long-term health and strength. Our
-        expert trainers, structured programs, and motivating environment ensure
-        real and sustainable results.
-      </p>
-
-      <h3>Opening Hours</h3>
-      <p>
-        Mon–Fri: 5:00 AM – 10:00 PM<br />
-        Saturday: 6:00 AM – 9:00 PM<br />
-        Sunday: 7:00 AM – 8:00 PM
-      </p>
-
-      <h3>Location</h3>
-      <p>
-        123 Fitness Avenue, Downtown City<br />
-        Near Central Mall
-      </p>
-    </section>
-
-    <!-- POPUP MESSAGE -->
-    <div id="servicePopup" class="popup-box">
-      <div class="popup-content">
-        <span onclick="closePopup()" class="close-btn">×</span>
-        <h2>Welcome to Lil Dolph iFitness 👋</h2>
-        <p>How may we be of service?</p>
-        <button onclick="closePopup()">Close</button>
+<!-- Hero Carousel -->
+<div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="images/88.jpg" class="d-block w-100" alt="Slide 1">
+      <div class="carousel-caption d-none d-md-block">
+        <h1>Build Your Body With Lil Dolph iFitness</h1>
+        <p>Join our fitness community and discover a stronger, leaner you.</p>
+        <a class="btn btn-primary" href="signup.html">Start Today</a>
       </div>
     </div>
+    <div class="carousel-item">
+      <img src="images/89.jpg" class="d-block w-100" alt="Slide 2">
+    </div>
+    <div class="carousel-item">
+      <img src="images/55.jpg" class="d-block w-100" alt="Slide 3">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
 
-    <footer>
-      <p>© 2026 Lil Dolph iFitness</p>
-    </footer>
-    <script src="slider.js"></script>
+<!-- Why Fitness Section -->
+<section class="why-fitness py-5 text-center bg-light">
+  <div class="container">
+    <h4 class="text-primary">WHY Dave's i-FITNESS</h4>
+    <h2 class="mb-5">Unique Experiences<br>Tailored To Your Lifestyle</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card h-100 p-4 text-center">
+          <span class="display-3">🏋️</span>
+          <h3 class="my-3">Wide Range of Fitness Programs</h3>
+          <p>Our timetable offers low- to high-intensity programmes designed for every fitness lifestyle.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 p-4 text-center">
+          <span class="display-3">👥</span>
+          <h3 class="my-3">Supportive Community</h3>
+          <p>Enjoy a sense of belonging in a community that supports your fitness goals.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 p-4 text-center">
+          <span class="display-3">🏢</span>
+          <h3 class="my-3">Ultra-Modern Facilities</h3>
+          <p>With certified trainers and modern gyms, we deliver world-class fitness experiences.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-  </body>
-</html>
+<!-- Popup Modal -->
+<div class="modal fade" id="serviceModal" tabindex="-1" aria-labelledby="serviceModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="serviceModalLabel">Welcome to Lil Dolph iFitness 👋</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        How may we be of service?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 
+<!-- Footer -->
+<footer class="text-center py-3 bg-dark text-white">
+  <p>© 2026 Lil Dolph iFitness</p>
+</footer>
 
+<!-- Bootstrap JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
+<!-- Auto-show the popup on page load -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var serviceModal = new bootstrap.Modal(document.getElementById('serviceModal'));
+    serviceModal.show();
+  });
+</script>
+
+</body>
+  </html>
