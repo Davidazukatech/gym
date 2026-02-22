@@ -1,349 +1,227 @@
-/* RESET */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-
+/* ======================================== */
+/* General Body & Typography */
 body {
-  background: #000;
-  color: white;
+  font-family: 'Arial', sans-serif;
   line-height: 1.6;
+  background-color: #f8f9fa;
+  color: #212529;
 }
 
-/* HEADER */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 40px;
-  background: #111;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  color: #212529;
 }
 
-.logo {
-  font-size: 22px;
-  font-weight: bold;
-  color: white;
-}
-
-/* NAV */
-nav {
-  display: flex;
-  gap: 20px;
-}
-
-nav a {
-  color: white;
+a {
   text-decoration: none;
-  font-size: 15px;
-  transition: 0.3s;
 }
 
-nav a:hover {
-  color: red;
-}
-
-.btn {
-  background: red;
-  padding: 8px 16px;
-  border-radius: 5px;
-}
-
-/* HAMBURGER */
-.menu-toggle {
-  display: none;
-  font-size: 28px;
-  cursor: pointer;
-  color: white;
-}
-
-/* MOBILE NAV */
-nav.active {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  background: #111;
-  top: 70px;
-  right: 0;
-  width: 70%;
-  padding: 20px;
-}
-
-/* HERO */
-.hero {
-  text-align: center;
-  padding: 100px 20px;
-}
-
-.hero h1 {
-  font-size: 40px;
-  margin-bottom: 15px;
-}
-
-.hero p {
-  max-width: 600px;
-  margin: auto;
-  margin-bottom: 20px;
-}
-
-/* SLIDER */
-.slider {
-  width: 100%;
-  height: 80vh;
-  overflow: hidden;
-  position: relative;
-}
-
-.slide {
-  width: 100%;
-  height: 80vh;
-  object-fit: cover;
-  position: absolute;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
-
-.slide.active {
-  opacity: 1;
-}
-
-/* WHY SECTION */
-.why-fitness {
-  padding: 80px 20px;
-  text-align: center;
-}
-
-.why-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
-  margin-top: 40px;
-}
-
-.why-box {
-  background: #111;
-  padding: 25px;
-  border-radius: 10px;
-  transition: 0.3s;
-}
-
-.why-box:hover {
-  transform: translateY(-5px);
-}
-
-/* CONTENT */
-.content {
-  padding: 70px 20px;
-  text-align: center;
-}
-
-.content h2 {
-  margin-bottom: 20px;
-}
-
-/* PAGE HEADER */
-.page-header {
-  background: #111;
-  padding: 80px 20px;
-  text-align: center;
-}
-
-/* ABOUT */
-.about-section {
-  padding: 60px 20px;
-}
-
-.about-image img {
-  width: 100%;
-  border-radius: 10px;
-  margin-top: 20px;
-}
-
-/* CLASS GRID */
-.class-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
-  padding: 60px 20px;
-}
-
-.class-card {
-  background: #111;
-  padding: 20px;
-  border-radius: 10px;
-}
-
-.class-card img {
-  width: 100%;
-  border-radius: 10px;
-  margin-bottom: 10px;
-}
-
-/* TRAINERS */
-.trainer-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
-  padding: 60px 20px;
-}
-
-.trainer-card {
-  background: #111;
-  padding: 20px;
-  text-align: center;
-  border-radius: 10px;
-}
-
-.trainer-card img {
-  width: 100%;
-  border-radius: 10px;
-}
-
-/* SOCIAL CONTACT */
-.social-contact {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  padding: 60px 20px;
-}
-
-.social-box {
-  background: #111;
-  padding: 20px;
-  border-radius: 10px;
-  width: 150px;
-  text-align: center;
+a:hover {
   text-decoration: none;
-  color: white;
-  transition: 0.3s;
+  color: #0d6efd;
 }
 
-.social-box:hover {
-  background: red;
+/* ======================================== */
+/* Navbar Customizations */
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.6rem;
 }
 
-/* LOGIN & SIGNUP */
-.Login,
-.Signup {
-  background: white;
-  color: black;
-  padding: 30px;
+.navbar-nav .nav-link {
+  font-weight: 500;
+  margin-right: 0.5rem;
+}
+
+.navbar-nav .btn {
+  font-weight: 600;
+}
+
+/* ======================================== */
+/* Hero Carousel */
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1rem 2rem;
   border-radius: 10px;
-  width: 350px;
-  margin: 120px auto;
 }
 
-input {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 10px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
+.carousel-caption h1 {
+  font-size: 2rem;
 }
 
-button {
-  width: 100%;
-  padding: 12px;
-  background: red;
+.carousel-caption p {
+  font-size: 1.1rem;
+}
+
+/* ======================================== */
+/* Why Fitness Section */
+.why-fitness h4 {
+  color: #0d6efd;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.why-fitness h2 {
+  font-weight: 700;
+}
+
+.why-fitness .card {
   border: none;
-  color: white;
-  border-radius: 8px;
-  cursor: pointer;
+  border-radius: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* POPUP */
-.popup-box {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.7);
-  display: none;
-  justify-content: center;
+.why-fitness .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.why-fitness .display-3 {
+  font-size: 3rem;
+}
+
+/* ======================================== */
+/* Trainer Cards */
+.trainer-card img {
+  border-radius: 15px;
+  object-fit: cover;
+  height: 250px;
+}
+
+.trainer-card h3 {
+  margin-top: 0.5rem;
+}
+
+/* ======================================== */
+/* Social Contact Buttons */
+.social-contact .btn {
+  display: flex;
   align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  border-radius: 50px;
+  padding: 0.8rem 1.2rem;
+  transition: transform 0.3s, opacity 0.3s;
 }
 
-.popup-content {
-  background: white;
-  color: black;
-  padding: 30px;
-  border-radius: 10px;
-  text-align: center;
+.social-contact .btn:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
 }
 
-.close-btn {
-  cursor: pointer;
-  font-size: 22px;
+/* ======================================== */
+/* Forms - Login / Signup */
+.card form label {
+  font-weight: 500;
 }
 
-/* FOOTER */
+.card form input {
+  border-radius: 8px;
+  padding: 0.6rem;
+}
+
+.card form button {
+  border-radius: 50px;
+  font-weight: 600;
+  transition: transform 0.3s;
+}
+
+.card form button:hover {
+  transform: scale(1.05);
+}
+
+/* ======================================== */
+/* Page Headers */
+.page-header {
+  background-color: #e9ecef;
+  padding: 3rem 1rem;
+  margin-bottom: 2rem;
+}
+
+.page-header h1 {
+  font-weight: 700;
+}
+
+.page-header p {
+  font-size: 1.1rem;
+}
+
+/* ======================================== */
+/* Footer */
 footer {
-  text-align: center;
-  padding: 20px;
-  background: #111;
-  margin-top: 40px;
+  background-color: #212529;
+  color: #fff;
 }
 
-/* ========================= */
-/* RESPONSIVENESS */
-/* ========================= */
-
-@media(max-width: 1024px) {
-
-  .why-grid,
-  .class-grid,
-  .trainer-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
+footer p {
+  margin: 0;
+  font-weight: 500;
 }
 
-@media(max-width: 768px) {
-
-  nav {
-    display: none;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  .hero h1 {
-    font-size: 28px;
-  }
-
-  .why-grid,
-  .class-grid,
-  .trainer-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .Login,
-  .Signup {
-    width: 90%;
-  }
-
+/* ======================================== */
+/* Buttons (general) */
+.btn-primary {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
-@media(max-width: 480px) {
-
-  header {
-    padding: 15px 20px;
-  }
-
-  .logo {
-    font-size: 18px;
-  }
-
-  .hero {
-    padding: 70px 15px;
-  }
-
+.btn-primary:hover {
+  background-color: #0b5ed7;
+  transform: scale(1.05);
 }
 
+.btn-secondary {
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
+
+.btn-secondary:hover {
+  background-color: #5c636a;
+  transform: scale(1.05);
+}
+
+/* ======================================== */
+/* Hero Section Text Buttons */
+.carousel-caption .btn {
+  font-weight: 600;
+  padding: 0.7rem 1.5rem;
+  border-radius: 50px;
+}
+
+/* ======================================== */
+/* Cards & Sections Spacing */
+.card {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+section {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+/* ======================================== */
+/* Responsive Adjustments */
+@media (max-width: 767px) {
+  .carousel-caption h1 {
+    font-size: 1.5rem;
+  }
+  .carousel-caption p {
+    font-size: 1rem;
+  }
+  .why-fitness .display-3 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .social-contact .btn {
+    width: 100%;
+  }
+}
